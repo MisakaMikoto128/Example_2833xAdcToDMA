@@ -86,11 +86,20 @@
 #define GROUP_NUM 8
 #define BUF_SIZE (GROUP_NUM * PIONTS_PER_GROUP) // Sample buffer size
 
+// 全波RMS
+float AdcRMSE[GROUP_NUM];
+float AdcRMS[GROUP_NUM];
+float AdcAvg[GROUP_NUM];
+
+float AdcVoltRMSE[GROUP_NUM];
+float AdcVoltRMS[GROUP_NUM];
+float AdcVoltAvg[GROUP_NUM];
+// 半波RMS
+float AdcHalfWaveRMS[GROUP_NUM];
+
 //
 // Globals
 //
-Uint32 j = 0;
-
 #pragma DATA_SECTION(DMABuf1, "DMARAML4");
 volatile Uint16 DMABuf1[BUF_SIZE];
 
@@ -156,14 +165,10 @@ void main(void)
   EnableInterrupts();
 
   config_ADC();
-
   config_DMA();
-
   StartDMACH1();
-
   config_ePWM1_to_generate_ADCSOCA();
   enable_ePWM1();
-
   for (;;)
     ;
 }
@@ -371,6 +376,8 @@ void config_DMA()
                    CHINT_END, CHINT_ENABLE);
 }
 
+#include <math.h>
+#include <stdint.h>
 //
 // local_DINTCH1_ISR - INT7.1(DMA Channel 1)
 //
@@ -386,6 +393,33 @@ __interrupt void local_DINTCH1_ISR(void)
   // Next two lines for debug only to halt the processor here
   // Remove after inserting ISR Code
   //
+
+  // Calculate RMS
+  for (uint32_t i = 0; i < GROUP_NUM; i++)
+  {
+    volatile uint16_t *pData = &DMABuf1[i * PIONTS_PER_GROUP];
+    uint32_t sum = 0;
+    for (uint32_t j = 0; j < PIONTS_PER_GROUP; j++)
+    {
+      sum += pData[j];
+    }
+    AdcAvg[i] = sum * 1.0f / PIONTS_PER_GROUP;
+
+    uint32_t pow2_sum_e = 0;
+    uint32_t pow2_sum = 0;
+    for (uint32_t j = 0; j < PIONTS_PER_GROUP; j++)
+    {
+        pow2_sum_e += powf(pData[j] - AdcAvg[i], 2);
+        pow2_sum += powf(pData[j], 2);
+    }
+    AdcRMSE[i] = sqrtf(pow2_sum_e * 1.0f / PIONTS_PER_GROUP);
+    AdcRMS[i] = sqrtf(pow2_sum * 1.0f / PIONTS_PER_GROUP);
+
+
+    AdcVoltAvg[i] = (AdcAvg[i] - ZOFFSET) * 3.0f / 4096;
+    AdcVoltRMSE[i] = AdcRMSE[i] * 3.0f / 4096;
+    AdcVoltRMS[i] = AdcRMS[i] * 3.0f / 4096;
+  }
 }
 
 //
