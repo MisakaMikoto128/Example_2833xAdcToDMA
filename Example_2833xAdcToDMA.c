@@ -78,13 +78,13 @@
 // ADC module clock = HSPCLK/2*ADC_CKPS   = 25.0MHz/(1*2) = 12.5MHz
 //
 #define ADC_CKPS 0x1
-
 #define ADC_SHCLK 0xf // S/H width in ADC module periods = 16 ADC clocks
 #define AVG 1000      // Average sample limit
 #define ZOFFSET 0x00  // Average Zero offset
-#define PIONTS_PER_GROUP 10
+
+#define PIONTS_PER_GROUP 128
 #define GROUP_NUM 8
-#define BUF_SIZE (GROUP_NUM * PIONTS_PER_GROUP)   // Sample buffer size
+#define BUF_SIZE (GROUP_NUM * PIONTS_PER_GROUP) // Sample buffer size
 
 //
 // Globals
@@ -103,7 +103,8 @@ __interrupt void local_DINTCH1_ISR(void);
 //
 // Main
 //
-void main(void) {
+void main(void)
+{
   Uint32 i;
 
   //
@@ -183,6 +184,7 @@ void main(void) {
   AdcRegs.ADCTRL1.bit.SEQ_CASC = 0; // 0 Non-Cascaded Mode
   AdcRegs.ADCTRL2.bit.INT_ENA_SEQ1 = 0x1;
   AdcRegs.ADCTRL2.bit.RST_SEQ1 = 0x1;
+
   AdcRegs.ADCCHSELSEQ1.bit.CONV00 = 0x0;
   AdcRegs.ADCCHSELSEQ1.bit.CONV01 = 0x1;
   AdcRegs.ADCCHSELSEQ1.bit.CONV02 = 0x2;
@@ -210,7 +212,8 @@ void main(void) {
   //
   // Clear Table
   //
-  for (i = 0; i < BUF_SIZE; i++) {
+  for (i = 0; i < BUF_SIZE; i++)
+  {
     DMABuf1[i] = 0;
   }
 
@@ -237,8 +240,13 @@ void main(void) {
   //    DMACH1WrapConfig(0,0,9,0);
 
   DMACH1BurstConfig(GROUP_NUM - 1, 1, PIONTS_PER_GROUP);
-  DMACH1TransferConfig(PIONTS_PER_GROUP - 1, 0, -((GROUP_NUM - 1)*PIONTS_PER_GROUP - 1));
+  DMACH1TransferConfig(PIONTS_PER_GROUP - 1, 0, -((GROUP_NUM - 1) * PIONTS_PER_GROUP - 1));
   DMACH1WrapConfig(0, 0, PIONTS_PER_GROUP - 1, 0);
+
+  //  DMACH1BurstConfig(0,1,1);
+  //  DMACH1TransferConfig(128 - 1,0,1);
+  //  DMACH1WrapConfig(0,0,128 - 1,0);
+
   DMACH1ModeConfig(DMA_SEQ1INT, PERINT_ENABLE, ONESHOT_DISABLE, CONT_ENABLE,
                    SYNC_DISABLE, SYNC_SRC, OVRFLOW_DISABLE, SIXTEEN_BIT,
                    CHINT_END, CHINT_ENABLE);
@@ -272,11 +280,13 @@ void main(void) {
   // Start SEQ1
   //
   //  AdcRegs.ADCTRL2.bit.SOC_SEQ1 = 0x1;
-  //
-  // For this example will re-start manually
-  //
-  //  for (i = 0; i < 10000; i++) {
-  //    for (j = 0; j < 10000; j++) {
+  //  //
+  //  // For this example will re-start manually
+  //  //
+  //  for (i = 0; i < 0xFFFFFFFF; i++)
+  //  {
+  //    for (j = 0; j < 10000; j++)
+  //    {
   //    }
   //
   //    //
@@ -292,7 +302,7 @@ void main(void) {
 //
 // Defines that configure the period for each timer
 //
-#define EPWM1_TIMER_TBPRD (75000000ULL / 2000UL) // Period register
+#define EPWM1_TIMER_TBPRD (75000000ULL / 2000UL - 1) // Period register
 #define EPWM1_MAX_CMPA 1950
 #define EPWM1_MIN_CMPA 50
 #define EPWM1_MAX_CMPB 1950
@@ -301,7 +311,8 @@ void main(void) {
 //
 // config_ePWM1_to_generate_ADCSOCA -
 //
-void config_ePWM1_to_generate_ADCSOCA(void) {
+void config_ePWM1_to_generate_ADCSOCA(void)
+{
   //
   // Configure ePWM1 Timer
   // Interrupt triggers ADCSOCA
@@ -312,7 +323,7 @@ void config_ePWM1_to_generate_ADCSOCA(void) {
   EPwm1Regs.ETSEL.bit.SOCASEL = 4; // Select SOC on up-count
   EPwm1Regs.ETPS.bit.SOCAPRD = 1;  // Generate pulse on 1st event
 
-  //PWM period = (TBPRD + 1 ) × TTBCLK Up-Count mode
+  // PWM period = (TBPRD + 1 ) × TTBCLK Up-Count mode
   EPwm1Regs.TBPRD = EPWM1_TIMER_TBPRD; // Set EPwm1 Timer period （周期）
 
   // Freeze counter （冻结 ，不运行，配置为0则开始运行）
@@ -328,7 +339,7 @@ void config_ePWM1_to_generate_ADCSOCA(void) {
   //
   // Setup counter mode TBCLK = SYSCLKOUT / (HSPCLKDIV × CLKDIV)
   //
-  //TBCLK=SYSCLKOUT/(HSPCLKDIV*CLKDIV):150/(1*2)=75MHz
+  // TBCLK=SYSCLKOUT/(HSPCLKDIV*CLKDIV):150/(1*2)=75MHz
   EPwm1Regs.TBCTL.bit.HSPCLKDIV = TB_DIV2;
   EPwm1Regs.TBCTL.bit.CLKDIV = TB_DIV1;
 
@@ -353,7 +364,8 @@ void config_ePWM1_to_generate_ADCSOCA(void) {
 //
 // config_ePWM2_to_generate_ADCSOCB -
 //
-void config_ePWM2_to_generate_ADCSOCB(void) {
+void config_ePWM2_to_generate_ADCSOCB(void)
+{
   //
   // Configure ePWM2 Timer
   // Interrupt triggers ADCSOCB
@@ -371,7 +383,8 @@ void config_ePWM2_to_generate_ADCSOCB(void) {
 //
 // local_DINTCH1_ISR - INT7.1(DMA Channel 1)
 //
-__interrupt void local_DINTCH1_ISR(void) {
+__interrupt void local_DINTCH1_ISR(void)
+{
   //
   // To receive more interrupts from this PIE group, acknowledge this
   // interrupt
@@ -382,6 +395,9 @@ __interrupt void local_DINTCH1_ISR(void) {
   // Next two lines for debug only to halt the processor here
   // Remove after inserting ISR Code
   //
+
+  // DMACH1AddrConfig(DMADest, DMASource);
+  // StartDMACH1();
 }
 
 //
