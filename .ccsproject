@@ -4,4 +4,5 @@
 	<deviceFamily value="C2000"/>
 	<isTargetManual value="false"/>
 	<origin value="C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/examples/adc_dma"/>
+	<connection value="common/targetdb/connections/TIXDS100v3_Dot7_Connection.xml"/>
 </projectOptions>

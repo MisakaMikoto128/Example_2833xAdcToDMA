@@ -95,7 +95,11 @@ Uint32 j = 0;
 volatile Uint16 DMABuf1[BUF_SIZE];
 
 void config_ePWM1_to_generate_ADCSOCA(void);
+void enable_ePWM1(void);
 void config_ePWM2_to_generate_ADCSOCB(void);
+
+void config_ADC();
+void config_DMA();
 volatile Uint16 *DMADest;
 volatile Uint16 *DMASource;
 __interrupt void local_DINTCH1_ISR(void);
@@ -105,8 +109,6 @@ __interrupt void local_DINTCH1_ISR(void);
 //
 void main(void)
 {
-  Uint32 i;
-
   //
   // Step 1. Initialize System Control:
   // PLL, WatchDog, enable Peripheral Clocks
@@ -153,99 +155,14 @@ void main(void)
 
   EnableInterrupts();
 
-  //
-  // Specific clock setting for this example
-  //
-  EALLOW;
-  SysCtrlRegs.HISPCP.all = ADC_MODCLK; // HSPCLK = SYSCLKOUT/ADC_MODCLK
-  EDIS;
+  config_ADC();
 
-  //
-  // Interrupts that are used in this example are re-mapped to
-  // ISR functions found within this file.
-  //
-  EALLOW; // Allow access to EALLOW protected registers
-  PieVectTable.DINTCH1 = &local_DINTCH1_ISR;
-  EDIS; // Disable access to EALLOW protected registers
-
-  IER |= M_INT7; // Enable INT7 (7.1 DMA Ch1)
-
-  //
-  // Step 4. Initialize all the Device Peripherals:
-  // This function is found in DSP2833x_InitPeripherals.c
-  //
-  // InitPeripherals(); // Not required for this example
-  InitAdc(); // For this example, init the ADC
-
-  //
-  // Specific ADC setup for this example:
-  //
-  AdcRegs.ADCTRL1.bit.ACQ_PS = ADC_SHCLK;
-  AdcRegs.ADCTRL3.bit.ADCCLKPS = ADC_CKPS;
-  AdcRegs.ADCTRL1.bit.SEQ_CASC = 0; // 0 Non-Cascaded Mode
-  AdcRegs.ADCTRL2.bit.INT_ENA_SEQ1 = 0x1;
-  AdcRegs.ADCTRL2.bit.RST_SEQ1 = 0x1;
-
-  AdcRegs.ADCCHSELSEQ1.bit.CONV00 = 0x0;
-  AdcRegs.ADCCHSELSEQ1.bit.CONV01 = 0x1;
-  AdcRegs.ADCCHSELSEQ1.bit.CONV02 = 0x2;
-  AdcRegs.ADCCHSELSEQ1.bit.CONV03 = 0x3;
-  AdcRegs.ADCCHSELSEQ2.bit.CONV04 = 0x4;
-  AdcRegs.ADCCHSELSEQ2.bit.CONV05 = 0x5;
-  AdcRegs.ADCCHSELSEQ2.bit.CONV06 = 0x6;
-  AdcRegs.ADCCHSELSEQ2.bit.CONV07 = 0x7;
-
-  //
-  // Enable ADC to accept ePWM_SOCA trigger
-  //
-  AdcRegs.ADCTRL2.bit.EPWM_SOCA_SEQ1 = 1;
-
-  //
-  // Set up ADC to perform 4 conversions for every SOC
-  //
-  AdcRegs.ADCMAXCONV.bit.MAX_CONV1 = GROUP_NUM - 1;
-
-  //
-  // Initialize DMA
-  //
-  DMAInitialize();
-
-  //
-  // Clear Table
-  //
-  for (i = 0; i < BUF_SIZE; i++)
-  {
-    DMABuf1[i] = 0;
-  }
-
-  //
-  // Configure DMA Channel
-  //
-
-  //
-  // Point DMA destination to the beginning of the array
-  //
-  DMADest = &DMABuf1[0];
-  //
-  // Point DMA source to ADC result register base
-  //
-  DMASource = &AdcMirror.ADCRESULT0;
-
-  DMACH1AddrConfig(DMADest, DMASource);
-
-  DMACH1BurstConfig(GROUP_NUM - 1, 1, PIONTS_PER_GROUP);
-  DMACH1TransferConfig(PIONTS_PER_GROUP - 1, 0, -((GROUP_NUM - 1) * PIONTS_PER_GROUP - 1));
-  DMACH1WrapConfig(0, 0, PIONTS_PER_GROUP - 1, 0);
-  DMACH1ModeConfig(DMA_SEQ1INT, PERINT_ENABLE, ONESHOT_DISABLE, CONT_ENABLE,
-                   SYNC_DISABLE, SYNC_SRC, OVRFLOW_DISABLE, SIXTEEN_BIT,
-                   CHINT_END, CHINT_ENABLE);
+  config_DMA();
 
   StartDMACH1();
 
-  EALLOW;
-  EPwm1Regs.TBCTL.bit.CTRMODE = 0; // Up count mode
-  EPwm1Regs.ETSEL.bit.SOCAEN = 1;
-  EDIS;
+  config_ePWM1_to_generate_ADCSOCA();
+  enable_ePWM1();
 
   for (;;)
     ;
@@ -326,10 +243,19 @@ void config_ePWM1_to_generate_ADCSOCA()
   SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 0;
   EDIS;
 
-  config_ePWM1_to_generate_ADCSOCA();
+  config_ePWM1_to_generate_ADCSOCA_();
 
   EALLOW;
   SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 1;
+  EDIS;
+}
+
+void enable_ePWM1(void)
+{
+  EALLOW;
+  __asm("   NOP");
+  EPwm1Regs.TBCTL.bit.CTRMODE = 0; // Up count mode
+  EPwm1Regs.ETSEL.bit.SOCAEN = 1;
   EDIS;
 }
 
@@ -350,6 +276,99 @@ void config_ePWM2_to_generate_ADCSOCB(void)
   EPwm2Regs.ETSEL.bit.SOCBEN = 1;    // Enable SOCB generation
   EPwm2Regs.TBCTL.bit.HSPCLKDIV = 0; // /1 clock mode
   EDIS;
+}
+
+void config_ADC()
+{
+
+  //
+  // Specific clock setting for this example
+  //
+  EALLOW;
+  SysCtrlRegs.HISPCP.all = ADC_MODCLK; // HSPCLK = SYSCLKOUT/ADC_MODCLK
+  EDIS;
+
+  //
+  // Step 4. Initialize all the Device Peripherals:
+  // This function is found in DSP2833x_InitPeripherals.c
+  //
+  // InitPeripherals(); // Not required for this example
+  InitAdc(); // For this example, init the ADC
+
+  //
+  // Specific ADC setup for this example:
+  //
+  AdcRegs.ADCTRL1.bit.ACQ_PS = ADC_SHCLK;
+  AdcRegs.ADCTRL3.bit.ADCCLKPS = ADC_CKPS;
+  AdcRegs.ADCTRL1.bit.SEQ_CASC = 0; // 0 Non-Cascaded Mode
+  AdcRegs.ADCTRL2.bit.INT_ENA_SEQ1 = 0x1;
+  AdcRegs.ADCTRL2.bit.RST_SEQ1 = 0x1;
+
+  AdcRegs.ADCCHSELSEQ1.bit.CONV00 = 0x0;
+  AdcRegs.ADCCHSELSEQ1.bit.CONV01 = 0x1;
+  AdcRegs.ADCCHSELSEQ1.bit.CONV02 = 0x2;
+  AdcRegs.ADCCHSELSEQ1.bit.CONV03 = 0x3;
+  AdcRegs.ADCCHSELSEQ2.bit.CONV04 = 0x4;
+  AdcRegs.ADCCHSELSEQ2.bit.CONV05 = 0x5;
+  AdcRegs.ADCCHSELSEQ2.bit.CONV06 = 0x6;
+  AdcRegs.ADCCHSELSEQ2.bit.CONV07 = 0x7;
+
+  //
+  // Enable ADC to accept ePWM_SOCA trigger
+  //
+  AdcRegs.ADCTRL2.bit.EPWM_SOCA_SEQ1 = 1;
+
+  //
+  // Set up ADC to perform 4 conversions for every SOC
+  //
+  AdcRegs.ADCMAXCONV.bit.MAX_CONV1 = GROUP_NUM - 1;
+}
+
+void config_DMA()
+{
+  //
+  // Interrupts that are used in this example are re-mapped to
+  // ISR functions found within this file.
+  //
+  EALLOW; // Allow access to EALLOW protected registers
+  PieVectTable.DINTCH1 = &local_DINTCH1_ISR;
+  EDIS; // Disable access to EALLOW protected registers
+
+  IER |= M_INT7; // Enable INT7 (7.1 DMA Ch1)
+  //
+  // Initialize DMA
+  //
+  DMAInitialize();
+
+  //
+  // Clear Table
+  //
+  for (int i = 0; i < BUF_SIZE; i++)
+  {
+    DMABuf1[i] = 0;
+  }
+
+  //
+  // Configure DMA Channel
+  //
+
+  //
+  // Point DMA destination to the beginning of the array
+  //
+  DMADest = &DMABuf1[0];
+  //
+  // Point DMA source to ADC result register base
+  //
+  DMASource = &AdcMirror.ADCRESULT0;
+
+  DMACH1AddrConfig(DMADest, DMASource);
+
+  DMACH1BurstConfig(GROUP_NUM - 1, 1, PIONTS_PER_GROUP);
+  DMACH1TransferConfig(PIONTS_PER_GROUP - 1, 0, -((GROUP_NUM - 1) * PIONTS_PER_GROUP - 1));
+  DMACH1WrapConfig(0, 0, PIONTS_PER_GROUP - 1, 0);
+  DMACH1ModeConfig(DMA_SEQ1INT, PERINT_ENABLE, ONESHOT_DISABLE, CONT_ENABLE,
+                   SYNC_DISABLE, SYNC_SRC, OVRFLOW_DISABLE, SIXTEEN_BIT,
+                   CHINT_END, CHINT_ENABLE);
 }
 
 //
