@@ -115,13 +115,6 @@ void main(void)
   InitSysCtrl();
 
   //
-  // Specific clock setting for this example
-  //
-  EALLOW;
-  SysCtrlRegs.HISPCP.all = ADC_MODCLK; // HSPCLK = SYSCLKOUT/ADC_MODCLK
-  EDIS;
-
-  //
   // Step 2. Initialize GPIO:
   // This example function is found in the DSP2833x_Gpio.c file and
   // illustrates how to set the GPIO to it's default state.
@@ -158,6 +151,19 @@ void main(void)
   //
   InitPieVectTable();
 
+
+  EnableInterrupts();
+
+
+
+
+  //
+  // Specific clock setting for this example
+  //
+  EALLOW;
+  SysCtrlRegs.HISPCP.all = ADC_MODCLK; // HSPCLK = SYSCLKOUT/ADC_MODCLK
+  EDIS;
+
   //
   // Interrupts that are used in this example are re-mapped to
   // ISR functions found within this file.
@@ -167,7 +173,6 @@ void main(void)
   EDIS; // Disable access to EALLOW protected registers
 
   IER |= M_INT7; // Enable INT7 (7.1 DMA Ch1)
-  EnableInterrupts();
 
   //
   // Step 4. Initialize all the Device Peripherals:
@@ -226,27 +231,16 @@ void main(void)
   //
   DMADest = &DMABuf1[0];
 
-  volatile Uint16 dmaSrc[8] = {0x1111, 0x2222, 0x3333, 0x4444,
-                               0x5555, 0x6666, 0x7777, 0x8888};
   //
   // Point DMA source to ADC result register base
   //
   DMASource = &AdcMirror.ADCRESULT0;
-  //      DMASource = &dmaSrc[0];
 
   DMACH1AddrConfig(DMADest, DMASource);
-  //    DMACH1BurstConfig(3,1,10);
-  //    DMACH1TransferConfig(9,0,-29);
-  //    DMACH1WrapConfig(0,0,9,0);
 
   DMACH1BurstConfig(GROUP_NUM - 1, 1, PIONTS_PER_GROUP);
   DMACH1TransferConfig(PIONTS_PER_GROUP - 1, 0, -((GROUP_NUM - 1) * PIONTS_PER_GROUP - 1));
   DMACH1WrapConfig(0, 0, PIONTS_PER_GROUP - 1, 0);
-
-  //  DMACH1BurstConfig(0,1,1);
-  //  DMACH1TransferConfig(128 - 1,0,1);
-  //  DMACH1WrapConfig(0,0,128 - 1,0);
-
   DMACH1ModeConfig(DMA_SEQ1INT, PERINT_ENABLE, ONESHOT_DISABLE, CONT_ENABLE,
                    SYNC_DISABLE, SYNC_SRC, OVRFLOW_DISABLE, SIXTEEN_BIT,
                    CHINT_END, CHINT_ENABLE);
@@ -275,25 +269,6 @@ void main(void)
   EPwm1Regs.TBCTL.bit.CTRMODE = 0; // Up count mode
   EPwm1Regs.ETSEL.bit.SOCAEN = 1;
   EDIS;
-
-  //
-  // Start SEQ1
-  //
-  //  AdcRegs.ADCTRL2.bit.SOC_SEQ1 = 0x1;
-  //  //
-  //  // For this example will re-start manually
-  //  //
-  //  for (i = 0; i < 0xFFFFFFFF; i++)
-  //  {
-  //    for (j = 0; j < 10000; j++)
-  //    {
-  //    }
-  //
-  //    //
-  //    // Normally ADC will be tied to ePWM, or timed routine
-  //    //
-  //    AdcRegs.ADCTRL2.bit.SOC_SEQ1 = 1;
-  //  }
 
   for (;;)
     ;
@@ -396,8 +371,6 @@ __interrupt void local_DINTCH1_ISR(void)
   // Remove after inserting ISR Code
   //
 
-  // DMACH1AddrConfig(DMADest, DMASource);
-  // StartDMACH1();
 }
 
 //
