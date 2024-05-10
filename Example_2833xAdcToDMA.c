@@ -151,11 +151,7 @@ void main(void)
   //
   InitPieVectTable();
 
-
   EnableInterrupts();
-
-
-
 
   //
   // Specific clock setting for this example
@@ -230,7 +226,6 @@ void main(void)
   // Point DMA destination to the beginning of the array
   //
   DMADest = &DMABuf1[0];
-
   //
   // Point DMA source to ADC result register base
   //
@@ -247,25 +242,7 @@ void main(void)
 
   StartDMACH1();
 
-  //
-  // For this example, only initialize the ePWM
-  //
   EALLOW;
-  /* Disable TBCLK within the ePWM要保证时基同步的话，
-  首先在配置TB/CC寄存器时先把时钟关闭，即所有TBCLK停止，不产生。
-  等全部配置后之后再打开，保证时钟同步
-  */
-  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 0;
-  EDIS;
-
-  config_ePWM1_to_generate_ADCSOCA();
-
-  EALLOW;
-  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 1;
-  EDIS;
-
-  EALLOW;
-  __asm("   NOP");
   EPwm1Regs.TBCTL.bit.CTRMODE = 0; // Up count mode
   EPwm1Regs.ETSEL.bit.SOCAEN = 1;
   EDIS;
@@ -286,7 +263,7 @@ void main(void)
 //
 // config_ePWM1_to_generate_ADCSOCA -
 //
-void config_ePWM1_to_generate_ADCSOCA(void)
+void config_ePWM1_to_generate_ADCSOCA_(void)
 {
   //
   // Configure ePWM1 Timer
@@ -336,6 +313,26 @@ void config_ePWM1_to_generate_ADCSOCA(void)
   EDIS;
 }
 
+void config_ePWM1_to_generate_ADCSOCA()
+{
+  //
+  // For this example, only initialize the ePWM
+  //
+  EALLOW;
+  /* Disable TBCLK within the ePWM要保证时基同步的话，
+  首先在配置TB/CC寄存器时先把时钟关闭，即所有TBCLK停止，不产生。
+  等全部配置后之后再打开，保证时钟同步
+  */
+  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 0;
+  EDIS;
+
+  config_ePWM1_to_generate_ADCSOCA();
+
+  EALLOW;
+  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 1;
+  EDIS;
+}
+
 //
 // config_ePWM2_to_generate_ADCSOCB -
 //
@@ -370,7 +367,6 @@ __interrupt void local_DINTCH1_ISR(void)
   // Next two lines for debug only to halt the processor here
   // Remove after inserting ISR Code
   //
-
 }
 
 //

@@ -1,0 +1,6 @@
+
+*.d
+
+*.obj
+Debug/ccsObjs.opt
+Debug/*.mk
