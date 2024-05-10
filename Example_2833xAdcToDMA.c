@@ -82,7 +82,9 @@
 #define ADC_SHCLK 0xf // S/H width in ADC module periods = 16 ADC clocks
 #define AVG 1000      // Average sample limit
 #define ZOFFSET 0x00  // Average Zero offset
-#define BUF_SIZE 80   // Sample buffer size
+#define PIONTS_PER_GROUP 10
+#define GROUP_NUM 8
+#define BUF_SIZE (GROUP_NUM * PIONTS_PER_GROUP)   // Sample buffer size
 
 //
 // Globals
@@ -97,59 +99,6 @@ void config_ePWM2_to_generate_ADCSOCB(void);
 volatile Uint16 *DMADest;
 volatile Uint16 *DMASource;
 __interrupt void local_DINTCH1_ISR(void);
-
-//
-// Defines that configure the period for each timer
-//
-#define EPWM1_TIMER_TBPRD  2000  // Period register
-#define EPWM1_MAX_CMPA     1950
-#define EPWM1_MIN_CMPA       50
-#define EPWM1_MAX_CMPB     1950
-#define EPWM1_MIN_CMPB       50
-
-static void initEPWM1(void)
-{
-    EALLOW;
-
-    EPwm1Regs.ETSEL.bit.SOCAEN = 1;     // Enable SOC on A group
-    EPwm1Regs.ETSEL.bit.SOCASEL = 4;    // Select SOC on up-count
-    EPwm1Regs.ETPS.bit.SOCAPRD = 1;     // Generate pulse on 1st event
-
-    EPwm1Regs.TBPRD = EPWM1_TIMER_TBPRD;        // Set EPwm1 Timer period （周期）
-
-    EPwm1Regs.TBCTL.bit.CTRMODE = TB_FREEZE;    // Freeze counter （冻结 ，不运行，配置为0则开始运行）
-
-    //
-    // Setup TBCLK
-    //
-
-    EPwm1Regs.TBPHS.half.TBPHS = 0x0000;          // Phase is 0
-    EPwm1Regs.TBCTR = 0x0000;                    // Clear counter
-
-    //
-    // Setup counter mode
-    //
-    EPwm1Regs.TBCTL.bit.HSPCLKDIV = TB_DIV1;
-    EPwm1Regs.TBCTL.bit.CLKDIV = TB_DIV1;
-
-    //
-    // Setup shadowing
-    //
-    EPwm1Regs.CMPCTL.bit.SHDWAMODE = CC_SHADOW;
-    EPwm1Regs.CMPCTL.bit.SHDWBMODE = CC_SHADOW;
-    EPwm1Regs.CMPCTL.bit.LOADAMODE = CC_CTR_ZERO; // Load on Zero
-    EPwm1Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
-
-    //
-    // Interrupt where we will change the Compare Values
-    //
-    EPwm1Regs.ETSEL.bit.INTSEL = ET_CTR_ZERO;    // Select INT on period event
-    EPwm1Regs.ETSEL.bit.INTEN = 1;               // Enable INT
-    EPwm1Regs.ETPS.bit.INTPRD = ET_1ST;          // Generate INT on every event
-
-    EDIS;
-}
-
 
 //
 // Main
@@ -216,32 +165,8 @@ void main(void) {
   PieVectTable.DINTCH1 = &local_DINTCH1_ISR;
   EDIS; // Disable access to EALLOW protected registers
 
-  IER = M_INT7; // Enable INT7 (7.1 DMA Ch1)
+  IER |= M_INT7; // Enable INT7 (7.1 DMA Ch1)
   EnableInterrupts();
-
-
-  SysCtrlRegs.PCLKCR1.bit.EPWM1ENCLK = 1; // ePWM1
-  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 1; // Enable TBCLK within the ePWM
-
-
-
-
-  config_ePWM1_to_generate_ADCSOCA();
-  config_ePWM2_to_generate_ADCSOCB();
-    initEPWM1();
-
-
-
-
-  //
-  // Step 5. User specific code, enable interrupts:
-  //
-
-  EALLOW;
-  SysCtrlRegs.MAPCNF.bit.MAPEPWM = 1; // Remap ePWMs for DMA access
-  EDIS;
-
-
 
   //
   // Step 4. Initialize all the Device Peripherals:
@@ -275,8 +200,7 @@ void main(void) {
   //
   // Set up ADC to perform 4 conversions for every SOC
   //
-  AdcRegs.ADCMAXCONV.bit.MAX_CONV1 = 7;
-
+  AdcRegs.ADCMAXCONV.bit.MAX_CONV1 = GROUP_NUM - 1;
 
   //
   // Initialize DMA
@@ -312,21 +236,36 @@ void main(void) {
   //    DMACH1TransferConfig(9,0,-29);
   //    DMACH1WrapConfig(0,0,9,0);
 
-  DMACH1BurstConfig(7, 1, 10);
-  DMACH1TransferConfig(9, 0, -69);
-  DMACH1WrapConfig(0, 0, 9, 0);
+  DMACH1BurstConfig(GROUP_NUM - 1, 1, PIONTS_PER_GROUP);
+  DMACH1TransferConfig(PIONTS_PER_GROUP - 1, 0, -((GROUP_NUM - 1)*PIONTS_PER_GROUP - 1));
+  DMACH1WrapConfig(0, 0, PIONTS_PER_GROUP - 1, 0);
   DMACH1ModeConfig(DMA_SEQ1INT, PERINT_ENABLE, ONESHOT_DISABLE, CONT_ENABLE,
                    SYNC_DISABLE, SYNC_SRC, OVRFLOW_DISABLE, SIXTEEN_BIT,
                    CHINT_END, CHINT_ENABLE);
 
   StartDMACH1();
 
+  //
+  // For this example, only initialize the ePWM
+  //
+  EALLOW;
+  /* Disable TBCLK within the ePWM要保证时基同步的话，
+  首先在配置TB/CC寄存器时先把时钟关闭，即所有TBCLK停止，不产生。
+  等全部配置后之后再打开，保证时钟同步
+  */
+  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 0;
+  EDIS;
+
+  config_ePWM1_to_generate_ADCSOCA();
+
+  EALLOW;
+  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC = 1;
+  EDIS;
 
   EALLOW;
   __asm("   NOP");
-  EPwm1Regs.ETSEL.bit.SOCAEN = 1;
   EPwm1Regs.TBCTL.bit.CTRMODE = 0; // Up count mode
-  EPwm2Regs.TBCTL.bit.CTRMODE = 0; // Up count mode
+  EPwm1Regs.ETSEL.bit.SOCAEN = 1;
   EDIS;
 
   //
@@ -351,6 +290,15 @@ void main(void) {
 }
 
 //
+// Defines that configure the period for each timer
+//
+#define EPWM1_TIMER_TBPRD (75000000ULL / 2000UL) // Period register
+#define EPWM1_MAX_CMPA 1950
+#define EPWM1_MIN_CMPA 50
+#define EPWM1_MAX_CMPB 1950
+#define EPWM1_MIN_CMPB 50
+
+//
 // config_ePWM1_to_generate_ADCSOCA -
 //
 void config_ePWM1_to_generate_ADCSOCA(void) {
@@ -360,16 +308,45 @@ void config_ePWM1_to_generate_ADCSOCA(void) {
   //
   EALLOW;
 
-  //
-  // Setup period (one off so DMA transfer will be obvious)
-  //
-  EPwm1Regs.TBPRD = 74;
+  EPwm1Regs.ETSEL.bit.SOCAEN = 1;  // Enable SOC on A group
+  EPwm1Regs.ETSEL.bit.SOCASEL = 4; // Select SOC on up-count
+  EPwm1Regs.ETPS.bit.SOCAPRD = 1;  // Generate pulse on 1st event
 
-  EPwm1Regs.CMPA.all = 0x501000;
-  EPwm1Regs.ETSEL.bit.SOCASEL = 2;   // ADCSOCA on TBCTR=TBPRD
-  EPwm1Regs.ETPS.bit.SOCAPRD = 1;    // Generate SOCA on 1st event
-  EPwm1Regs.ETSEL.bit.SOCAEN = 1;    // Enable SOCA generation
-  EPwm1Regs.TBCTL.bit.HSPCLKDIV = 0; // /1 clock mode
+  //PWM period = (TBPRD + 1 ) × TTBCLK Up-Count mode
+  EPwm1Regs.TBPRD = EPWM1_TIMER_TBPRD; // Set EPwm1 Timer period （周期）
+
+  // Freeze counter （冻结 ，不运行，配置为0则开始运行）
+  EPwm1Regs.TBCTL.bit.CTRMODE = TB_FREEZE;
+
+  //
+  // Setup TBCLK
+  //
+
+  EPwm1Regs.TBPHS.half.TBPHS = 0x0000; // Phase is 0
+  EPwm1Regs.TBCTR = 0x0000;            // Clear counter
+
+  //
+  // Setup counter mode TBCLK = SYSCLKOUT / (HSPCLKDIV × CLKDIV)
+  //
+  //TBCLK=SYSCLKOUT/(HSPCLKDIV*CLKDIV):150/(1*2)=75MHz
+  EPwm1Regs.TBCTL.bit.HSPCLKDIV = TB_DIV2;
+  EPwm1Regs.TBCTL.bit.CLKDIV = TB_DIV1;
+
+  //
+  // Setup shadowing
+  //
+  EPwm1Regs.CMPCTL.bit.SHDWAMODE = CC_SHADOW;
+  EPwm1Regs.CMPCTL.bit.SHDWBMODE = CC_SHADOW;
+  EPwm1Regs.CMPCTL.bit.LOADAMODE = CC_CTR_ZERO; // Load on Zero
+  EPwm1Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
+
+  //
+  // Interrupt where we will change the Compare Values
+  //
+  EPwm1Regs.ETSEL.bit.INTSEL = ET_CTR_ZERO; // Select INT on period event
+  EPwm1Regs.ETSEL.bit.INTEN = 1;            // Enable INT
+  EPwm1Regs.ETPS.bit.INTPRD = ET_1ST;       // Generate INT on every event
+
   EDIS;
 }
 
@@ -399,7 +376,7 @@ __interrupt void local_DINTCH1_ISR(void) {
   // To receive more interrupts from this PIE group, acknowledge this
   // interrupt
   //
-  PieCtrlRegs.PIEACK.all = PIEACK_GROUP7;
+  PieCtrlRegs.PIEACK.all |= PIEACK_GROUP7;
 
   //
   // Next two lines for debug only to halt the processor here
