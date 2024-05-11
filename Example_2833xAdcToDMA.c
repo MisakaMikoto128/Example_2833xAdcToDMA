@@ -58,6 +58,11 @@
 //
 #include "DSP28x_Project.h" // Device Headerfile and Examples Include File
 
+
+/*
+issue:
+那个ADC不配置MAXADCCONV = 8 - 1还是不能正常运行，不知道为什么，这个可能影响到高频采样。
+*/
 //
 // Defines for ADC start parameters
 //
@@ -326,7 +331,7 @@ void config_ADC()
   //
   // Set up ADC to perform 4 conversions for every SOC
   //
-  AdcRegs.ADCMAXCONV.bit.MAX_CONV1 = GROUP_NUM - 1;
+  AdcRegs.ADCMAXCONV.bit.MAX_CONV1 = 8 - 1;
 }
 
 void config_DMA()
