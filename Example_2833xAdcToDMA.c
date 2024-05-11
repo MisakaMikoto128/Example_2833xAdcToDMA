@@ -118,6 +118,7 @@ volatile Uint16 *DMADest;
 volatile Uint16 *DMASource;
 __interrupt void local_DINTCH1_ISR(void);
 
+void DSP_runTest_Init();
 //
 // Main
 //
@@ -168,6 +169,8 @@ void main(void)
   InitPieVectTable();
 
   EnableInterrupts();
+
+  // DSP_runTest_Init();
 
   config_ADC();
   config_DMA();

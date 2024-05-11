@@ -23,7 +23,69 @@ ORDERED_OBJS += \
 "./DSP2833x_SysCtrl.obj" \
 "./DSP2833x_usDelay.obj" \
 "./Example_2833xAdcToDMA.obj" \
-"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/cmd/28335_RAM_lnk.cmd" \
+"./dsp_rfft_adc.obj" \
+"./golden.obj" \
+"./input.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32_mag.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32_phase.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32_sincostable.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32_twiddleFactors.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32_win.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32i.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32it.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32s_mag.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32t.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32u.obj" \
+"./FPU/source/fpu32/fft/CFFT_f32ut.obj" \
+"./FPU/source/fpu32/fft/ICFFT_f32.obj" \
+"./FPU/source/fpu32/fft/ICFFT_f32t.obj" \
+"./FPU/source/fpu32/fft/RFFT_adc_f32.obj" \
+"./FPU/source/fpu32/fft/RFFT_adc_f32u.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32_adc_win.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32_mag.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32_phase.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32_sincostable.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32_twiddleFactors.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32_win.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32s_mag.obj" \
+"./FPU/source/fpu32/fft/RFFT_f32u.obj" \
+"./FPU/source/fpu32/fft/cfft_f32_brev.obj" \
+"./FPU/source/fpu32/fft/cfft_f32_pack.obj" \
+"./FPU/source/fpu32/fft/cfft_f32_unpack.obj" \
+"./FPU/source/fpu32/filter/FIR_f32.obj" \
+"./FPU/source/fpu32/filter/iir_f32.obj" \
+"./FPU/source/fpu32/utility/memcpy_fast.obj" \
+"./FPU/source/fpu32/utility/memcpy_fast_far.obj" \
+"./FPU/source/fpu32/utility/memset_fast.obj" \
+"./FPU/source/fpu32/vector/abs_SP_CV.obj" \
+"./FPU/source/fpu32/vector/abs_SP_CV_2.obj" \
+"./FPU/source/fpu32/vector/add_SP_CSxCV.obj" \
+"./FPU/source/fpu32/vector/add_SP_CVxCV.obj" \
+"./FPU/source/fpu32/vector/iabs_SP_CV.obj" \
+"./FPU/source/fpu32/vector/iabs_SP_CV_2.obj" \
+"./FPU/source/fpu32/vector/mac_SP_CVxCV.obj" \
+"./FPU/source/fpu32/vector/mac_SP_RVxCV.obj" \
+"./FPU/source/fpu32/vector/mac_SP_i16RVxCV.obj" \
+"./FPU/source/fpu32/vector/maxidx_SP_RV_2.obj" \
+"./FPU/source/fpu32/vector/mean_SP_CV_2.obj" \
+"./FPU/source/fpu32/vector/median_SP_RV.obj" \
+"./FPU/source/fpu32/vector/median_noreorder_SP_RV.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_CSxCS.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_CVxCV.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_CVxCVC.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_RMxRM.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_RMxRM_2.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_RSxRV_2.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_RSxRVxRV_2.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_RVxCV.obj" \
+"./FPU/source/fpu32/vector/mpy_SP_RVxRV_2.obj" \
+"./FPU/source/fpu32/vector/qsort_SP_RV.obj" \
+"./FPU/source/fpu32/vector/rnd_SP_RS.obj" \
+"./FPU/source/fpu32/vector/sub_SP_CSxCV.obj" \
+"./FPU/source/fpu32/vector/sub_SP_CVxCV.obj" \
+"../28335_RAM_lnk.cmd" \
 "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/cmd/DSP2833x_Headers_nonBIOS.cmd" \
 $(GEN_CMDS__FLAG) \
 -lIQmath_fpu32.lib \
@@ -36,7 +98,15 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include FPU/source/fpu32/fft/subdir_vars.mk
+-include FPU/source/fpu32/filter/subdir_vars.mk
+-include FPU/source/fpu32/utility/subdir_vars.mk
+-include FPU/source/fpu32/vector/subdir_vars.mk
 -include subdir_rules.mk
+-include FPU/source/fpu32/fft/subdir_rules.mk
+-include FPU/source/fpu32/filter/subdir_rules.mk
+-include FPU/source/fpu32/utility/subdir_rules.mk
+-include FPU/source/fpu32/vector/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -153,9 +223,13 @@ Example_2833xAdcToDMA.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "DSP2833x_ADC_cal.obj" "DSP2833x_Adc.obj" "DSP2833x_CodeStartBranch.obj" "DSP2833x_DMA.obj" "DSP2833x_DefaultIsr.obj" "DSP2833x_GlobalVariableDefs.obj" "DSP2833x_PieCtrl.obj" "DSP2833x_PieVect.obj" "DSP2833x_SysCtrl.obj" "DSP2833x_usDelay.obj" "Example_2833xAdcToDMA.obj" 
-	-$(RM) "DSP2833x_Adc.d" "DSP2833x_DMA.d" "DSP2833x_DefaultIsr.d" "DSP2833x_GlobalVariableDefs.d" "DSP2833x_PieCtrl.d" "DSP2833x_PieVect.d" "DSP2833x_SysCtrl.d" "Example_2833xAdcToDMA.d" 
-	-$(RM) "DSP2833x_ADC_cal.d" "DSP2833x_CodeStartBranch.d" "DSP2833x_usDelay.d" 
+	-$(RM) "DSP2833x_ADC_cal.obj" "DSP2833x_Adc.obj" "DSP2833x_CodeStartBranch.obj" "DSP2833x_DMA.obj" "DSP2833x_DefaultIsr.obj" "DSP2833x_GlobalVariableDefs.obj" "DSP2833x_PieCtrl.obj" "DSP2833x_PieVect.obj" "DSP2833x_SysCtrl.obj" "DSP2833x_usDelay.obj" "Example_2833xAdcToDMA.obj" "dsp_rfft_adc.obj" "golden.obj" "input.obj" "FPU\source\fpu32\fft\CFFT_f32.obj" "FPU\source\fpu32\fft\CFFT_f32_mag.obj" "FPU\source\fpu32\fft\CFFT_f32_phase.obj" "FPU\source\fpu32\fft\CFFT_f32_sincostable.obj" "FPU\source\fpu32\fft\CFFT_f32_twiddleFactors.obj" "FPU\source\fpu32\fft\CFFT_f32_win.obj" "FPU\source\fpu32\fft\CFFT_f32i.obj" "FPU\source\fpu32\fft\CFFT_f32it.obj" "FPU\source\fpu32\fft\CFFT_f32s_mag.obj" "FPU\source\fpu32\fft\CFFT_f32t.obj" "FPU\source\fpu32\fft\CFFT_f32u.obj" "FPU\source\fpu32\fft\CFFT_f32ut.obj" "FPU\source\fpu32\fft\ICFFT_f32.obj" "FPU\source\fpu32\fft\ICFFT_f32t.obj" "FPU\source\fpu32\fft\RFFT_adc_f32.obj" "FPU\source\fpu32\fft\RFFT_adc_f32u.obj" "FPU\source\fpu32\fft\RFFT_f32.obj" "FPU\source\fpu32\fft\RFFT_f32_adc_win.obj" 
+	-$(RM) "FPU\source\fpu32\fft\RFFT_f32_mag.obj" "FPU\source\fpu32\fft\RFFT_f32_phase.obj" "FPU\source\fpu32\fft\RFFT_f32_sincostable.obj" "FPU\source\fpu32\fft\RFFT_f32_twiddleFactors.obj" "FPU\source\fpu32\fft\RFFT_f32_win.obj" "FPU\source\fpu32\fft\RFFT_f32s_mag.obj" "FPU\source\fpu32\fft\RFFT_f32u.obj" "FPU\source\fpu32\fft\cfft_f32_brev.obj" "FPU\source\fpu32\fft\cfft_f32_pack.obj" "FPU\source\fpu32\fft\cfft_f32_unpack.obj" "FPU\source\fpu32\filter\FIR_f32.obj" "FPU\source\fpu32\filter\iir_f32.obj" "FPU\source\fpu32\utility\memcpy_fast.obj" "FPU\source\fpu32\utility\memcpy_fast_far.obj" "FPU\source\fpu32\utility\memset_fast.obj" "FPU\source\fpu32\vector\abs_SP_CV.obj" "FPU\source\fpu32\vector\abs_SP_CV_2.obj" "FPU\source\fpu32\vector\add_SP_CSxCV.obj" "FPU\source\fpu32\vector\add_SP_CVxCV.obj" "FPU\source\fpu32\vector\iabs_SP_CV.obj" "FPU\source\fpu32\vector\iabs_SP_CV_2.obj" "FPU\source\fpu32\vector\mac_SP_CVxCV.obj" "FPU\source\fpu32\vector\mac_SP_RVxCV.obj" "FPU\source\fpu32\vector\mac_SP_i16RVxCV.obj" 
+	-$(RM) "FPU\source\fpu32\vector\maxidx_SP_RV_2.obj" "FPU\source\fpu32\vector\mean_SP_CV_2.obj" "FPU\source\fpu32\vector\median_SP_RV.obj" "FPU\source\fpu32\vector\median_noreorder_SP_RV.obj" "FPU\source\fpu32\vector\mpy_SP_CSxCS.obj" "FPU\source\fpu32\vector\mpy_SP_CVxCV.obj" "FPU\source\fpu32\vector\mpy_SP_CVxCVC.obj" "FPU\source\fpu32\vector\mpy_SP_RMxRM.obj" "FPU\source\fpu32\vector\mpy_SP_RMxRM_2.obj" "FPU\source\fpu32\vector\mpy_SP_RSxRV_2.obj" "FPU\source\fpu32\vector\mpy_SP_RSxRVxRV_2.obj" "FPU\source\fpu32\vector\mpy_SP_RVxCV.obj" "FPU\source\fpu32\vector\mpy_SP_RVxRV_2.obj" "FPU\source\fpu32\vector\qsort_SP_RV.obj" "FPU\source\fpu32\vector\rnd_SP_RS.obj" "FPU\source\fpu32\vector\sub_SP_CSxCV.obj" "FPU\source\fpu32\vector\sub_SP_CVxCV.obj" 
+	-$(RM) "DSP2833x_Adc.d" "DSP2833x_DMA.d" "DSP2833x_DefaultIsr.d" "DSP2833x_GlobalVariableDefs.d" "DSP2833x_PieCtrl.d" "DSP2833x_PieVect.d" "DSP2833x_SysCtrl.d" "Example_2833xAdcToDMA.d" "dsp_rfft_adc.d" "golden.d" "input.d" "FPU\source\fpu32\fft\CFFT_f32_sincostable.d" "FPU\source\fpu32\fft\RFFT_f32_sincostable.d" "FPU\source\fpu32\vector\median_SP_RV.d" "FPU\source\fpu32\vector\median_noreorder_SP_RV.d" "FPU\source\fpu32\vector\qsort_SP_RV.d" 
+	-$(RM) "DSP2833x_ADC_cal.d" "DSP2833x_CodeStartBranch.d" "DSP2833x_usDelay.d" "FPU\source\fpu32\fft\CFFT_f32.d" "FPU\source\fpu32\fft\CFFT_f32_mag.d" "FPU\source\fpu32\fft\CFFT_f32_phase.d" "FPU\source\fpu32\fft\CFFT_f32_twiddleFactors.d" "FPU\source\fpu32\fft\CFFT_f32_win.d" "FPU\source\fpu32\fft\CFFT_f32i.d" "FPU\source\fpu32\fft\CFFT_f32it.d" "FPU\source\fpu32\fft\CFFT_f32s_mag.d" "FPU\source\fpu32\fft\CFFT_f32t.d" "FPU\source\fpu32\fft\CFFT_f32u.d" "FPU\source\fpu32\fft\CFFT_f32ut.d" "FPU\source\fpu32\fft\ICFFT_f32.d" "FPU\source\fpu32\fft\ICFFT_f32t.d" "FPU\source\fpu32\fft\RFFT_adc_f32.d" "FPU\source\fpu32\fft\RFFT_adc_f32u.d" "FPU\source\fpu32\fft\RFFT_f32.d" "FPU\source\fpu32\fft\RFFT_f32_adc_win.d" "FPU\source\fpu32\fft\RFFT_f32_mag.d" "FPU\source\fpu32\fft\RFFT_f32_phase.d" "FPU\source\fpu32\fft\RFFT_f32_twiddleFactors.d" "FPU\source\fpu32\fft\RFFT_f32_win.d" "FPU\source\fpu32\fft\RFFT_f32s_mag.d" "FPU\source\fpu32\fft\RFFT_f32u.d" "FPU\source\fpu32\fft\cfft_f32_brev.d" "FPU\source\fpu32\fft\cfft_f32_pack.d" 
+	-$(RM) "FPU\source\fpu32\fft\cfft_f32_unpack.d" "FPU\source\fpu32\filter\FIR_f32.d" "FPU\source\fpu32\filter\iir_f32.d" "FPU\source\fpu32\utility\memcpy_fast.d" "FPU\source\fpu32\utility\memcpy_fast_far.d" "FPU\source\fpu32\utility\memset_fast.d" "FPU\source\fpu32\vector\abs_SP_CV.d" "FPU\source\fpu32\vector\abs_SP_CV_2.d" "FPU\source\fpu32\vector\add_SP_CSxCV.d" "FPU\source\fpu32\vector\add_SP_CVxCV.d" "FPU\source\fpu32\vector\iabs_SP_CV.d" "FPU\source\fpu32\vector\iabs_SP_CV_2.d" "FPU\source\fpu32\vector\mac_SP_CVxCV.d" "FPU\source\fpu32\vector\mac_SP_RVxCV.d" "FPU\source\fpu32\vector\mac_SP_i16RVxCV.d" "FPU\source\fpu32\vector\maxidx_SP_RV_2.d" "FPU\source\fpu32\vector\mean_SP_CV_2.d" "FPU\source\fpu32\vector\mpy_SP_CSxCS.d" "FPU\source\fpu32\vector\mpy_SP_CVxCV.d" "FPU\source\fpu32\vector\mpy_SP_CVxCVC.d" "FPU\source\fpu32\vector\mpy_SP_RMxRM.d" "FPU\source\fpu32\vector\mpy_SP_RMxRM_2.d" "FPU\source\fpu32\vector\mpy_SP_RSxRV_2.d" "FPU\source\fpu32\vector\mpy_SP_RSxRVxRV_2.d" "FPU\source\fpu32\vector\mpy_SP_RVxCV.d" 
+	-$(RM) "FPU\source\fpu32\vector\mpy_SP_RVxRV_2.d" "FPU\source\fpu32\vector\rnd_SP_RS.d" "FPU\source\fpu32\vector\sub_SP_CSxCV.d" "FPU\source\fpu32\vector\sub_SP_CVxCV.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

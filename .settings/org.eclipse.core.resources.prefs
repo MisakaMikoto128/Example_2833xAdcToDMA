@@ -1,4 +1,12 @@
 eclipse.preferences.version=1
+encoding//Debug/FPU/source/fpu32/fft/subdir_rules.mk=UTF-8
+encoding//Debug/FPU/source/fpu32/fft/subdir_vars.mk=UTF-8
+encoding//Debug/FPU/source/fpu32/filter/subdir_rules.mk=UTF-8
+encoding//Debug/FPU/source/fpu32/filter/subdir_vars.mk=UTF-8
+encoding//Debug/FPU/source/fpu32/utility/subdir_rules.mk=UTF-8
+encoding//Debug/FPU/source/fpu32/utility/subdir_vars.mk=UTF-8
+encoding//Debug/FPU/source/fpu32/vector/subdir_rules.mk=UTF-8
+encoding//Debug/FPU/source/fpu32/vector/subdir_vars.mk=UTF-8
 encoding//Debug/makefile=UTF-8
 encoding//Debug/objects.mk=UTF-8
 encoding//Debug/sources.mk=UTF-8

@@ -4,3 +4,6 @@
 *.obj
 Debug/ccsObjs.opt
 Debug/*.mk
+*.mk
+Debug/.clangd/*
+Debug/.clangd/.cache/clangd/index/Example_2833xAdcToDMA.c.08564D885E588A08.idx

@@ -1,57 +1,367 @@
 [
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_ADC_cal.asm"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_Adc.c"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_CodeStartBranch.asm"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_DMA.c"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_DefaultIsr.c"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/source/DSP2833x_GlobalVariableDefs.c"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_PieCtrl.c"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_PieVect.c"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_SysCtrl.c"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/source/DSP2833x_usDelay.asm"
    },
    {
       "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -D_DEBUG -DLARGE_MODEL",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
       "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Example_2833xAdcToDMA.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/dsp_rfft_adc.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/golden.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/input.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32_mag.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32_phase.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32_sincostable.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32_twiddleFactors.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32_win.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32i.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32it.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32s_mag.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32t.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32u.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/CFFT_f32ut.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/ICFFT_f32.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/ICFFT_f32t.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_adc_f32.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_adc_f32u.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32_adc_win.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32_mag.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32_phase.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32_sincostable.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32_twiddleFactors.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32_win.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32s_mag.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/RFFT_f32u.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/cfft_f32_brev.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/cfft_f32_pack.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/fft/cfft_f32_unpack.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/filter/FIR_f32.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/filter/iir_f32.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/utility/memcpy_fast.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/utility/memcpy_fast_far.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/utility/memset_fast.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/abs_SP_CV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/abs_SP_CV_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/add_SP_CSxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/add_SP_CVxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/iabs_SP_CV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/iabs_SP_CV_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mac_SP_CVxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mac_SP_RVxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mac_SP_i16RVxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/maxidx_SP_RV_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mean_SP_CV_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/median_SP_RV.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/median_noreorder_SP_RV.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_CSxCS.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_CVxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_CVxCVC.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_RMxRM.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_RMxRM_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_RSxRV_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_RSxRVxRV_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_RVxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/mpy_SP_RVxRV_2.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/qsort_SP_RV.c"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/rnd_SP_RS.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/sub_SP_CSxCV.asm"
+   },
+   {
+      "directory" : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccstheia131/ccs/tools/compiler/ti-cgt-c2000_22.6.1A23259/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/headers/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/device_support/f2833x/common/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/IQmath/c28/include\" -I\"C:/ti/c2000/C2000Ware_5_01_00_00/libraries/math/FPUfastRTS/c28/include\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/fpu32/\" -I\"C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/include/\" -D_DEBUG -DLARGE_MODEL",
+      "file"      : "C:/Users/liuyu/workspace_ccstheia/Example_2833xAdcToDMA/FPU/source/fpu32/vector/sub_SP_CVxCV.asm"
    }
 ]
